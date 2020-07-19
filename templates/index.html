@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>INTEREST CATEGORY PREDICTION</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type='text/css'>
+</head>
+<body>
+<div class="container">
+<h1 style="text-align:center"> INTEREST RATE CATEGORY PREDICTOR</h1>
+  <form action="{{ url_for('predict')}}"method="post">
+    <div class="row">
+      <div class="col-25">
+        <label for="Loan_Amount_Requested">Loan_Amount_Requested</label>
+      </div>
+      <div class="col-75">
+        <input type="number" id="value" name="Loan_Amount_Requested" placeholder="Enter the amount">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="Length_Employed">Length_Employed</label>
+      </div>
+      <div class="col-75">
+        <input type="number" id="value" name="Length_Employed" placeholder="Years Employeed (From 0)">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="drop">Home type</label>
+      </div>
+      <div class="col-75">
+        <select id="drop" name="Home_type">
+          <option value="Rent">Rent</option>
+          <option value="Mortage">Mortage</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+    </div>
+     <div class="row">
+      <div class="col-25">
+        <label for="Debt_To_Income">Debt_To_Income</label>
+      </div>
+      <div class="col-75">
+        <input type="number" id="value" name="Debt_To_Income" placeholder="Debt to income">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="Income_verification">Income_verification</label>
+      </div>
+      <div class="col-75">
+        <select id="drop" name="Income_verification">
+          <option value="not verified">not verified</option>
+          <option value="VERIFIED - income">VERIFIED - income</option>
+          <option value="VERIFIED - income source">VERIFIED - income source</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="drop">Purpose_Of_Loan</label>
+      </div>
+      <div class="col-75">
+        <select id="drop" name="Purpose_Of_Loan">
+          <option value="car">car</option>
+          <option value="debt_consolidation">debt_consolidation</option>
+          <option value="credit_card">credit_card</option>
+          <option value="home_improvement">home_improvement</option>
+          <option value="debt_consolidation">debt_consolidation</option>
+          <option value="major_purchase">major_purchase</option>
+          <option value="medical">medical</option>
+          <option value="small_business">small_business</option>
+          <option value="moving">moving</option>
+          <option value="wedding">wedding</option>
+          <option value="vacation">vacation</option>
+          <option value="house">house</option>
+          <option value="educational">educational</option>
+          <option value="renewable_energy">renewable_energy</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+    </div>
+     <div class="row">
+      <div class="col-25">
+        <label for="Debt_To_Income">Inquiries_Last_6Mo</label>
+      </div>
+      <div class="col-75">
+        <input type="number" id="value" name="Inquiries_Last_6Mo" placeholder="Inquiries_Last_6Mo">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="Debt_To_Income">Months_Since_Deliquency</label>
+      </div>
+      <div class="col-75">
+        <input type="number" id="value" name="Months_Since_Deliquency" placeholder="Months_Since_Deliquency">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="Debt_To_Income">Number_Open_Accounts</label>
+      </div>
+      <div class="col-75">
+        <input type="number" id="value" name="Number_Open_Accounts " placeholder="Number_Open_Accounts">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="Debt_To_Income">Total_Accounts</label>
+      </div>
+      <div class="col-75">
+        <input type="number" id="value" name="Total_Accounts" placeholder="Total_Accounts">
+      </div>
+    </div>
+     <div class="row">
+      <div class="col-25">
+        <label for="Annual_Income">Annual_Income</label>
+      </div>
+      <div class="col-75">
+        <input type="number" id="value" name="Annual_Income" placeholder="Enter the Income">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br>
+      </div>
+    </div>
+
+    <div class="row">
+    <div class="col-25">
+      <input type="submit" value="Submit">
+      </div>
+    </div>
+  </form>
+    {{ prediction_text }}
+</div>
+</body>
+</html>
