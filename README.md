@@ -10,6 +10,24 @@ There are three categories
 ## DATASET
 The dataset is taken from analytics vidya hackathon –banking completion
 URL: https://datahack.analyticsvidhya.com/contest/janatahack-machine-learning-for-banking/
+## STEPS FOLLOWED
+ ### 1. DATA PREPARATION
+         I) HANDLED MISSING VALUES
+         II) ENCODING FOR XGBOOST
+         III) OUTLIERS CHECKING
+ ### 2. FEATURE SELECTION 
+         I) RECURSIVE FEATURE ELIMINATION -But it did not affect the models accuracy much 
+ ### 3. MODEL TRAINING 
+         I) XGBOOST AND CATBOOST
+ ### 4. UI
+        DEVELOPED USING FLASK
+## LIBRARIES USED 
+   ### I) FOR DATA PREPARATION 
+         Pandas, matplotlib, seaborn
+   ### II) MODEL TRAINING 
+         Sklearn, xgboost ,catboost
+   ### III) UI 
+         Flask, HTML ,CSS 
 ## UI PREVIEW  
 ![screencapture-127-0-0-1-5000-2020-07-19-12_33_37](https://user-images.githubusercontent.com/35831581/87869388-17971280-c9bd-11ea-92c6-5f99c10d1973.png)
  ### ATTRIBUTES DESCRIPTION
